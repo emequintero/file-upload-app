@@ -1,0 +1,8 @@
+<h1>Image Gallery with Upload</h1>
+
+<p>Upload a New File</p>
+<input type="file" name="my_file" (change)="changeFileSelection($event)">
+<button (click)="uploadFile()">UPLOAD</button>
+
+<h2>My Gallery</h2>
+<img *ngFor="let fileName of uploadedFiles" src="http://localhost:2222/{{fileName}}">
